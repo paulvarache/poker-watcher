@@ -1,0 +1,6 @@
+<div class="card" ng-class="{'showed': showed, 'voted': user.voted&&!showed}">
+    <div class="front" ng-bind="user.choice"></div>
+    <div class="back" style="background: url('{{user.picture}}') no-repeat">
+        <p class="name" ng-bind="user.username"></p>
+    </div>
+</div>

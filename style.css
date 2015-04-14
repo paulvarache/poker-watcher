@@ -1,0 +1,116 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+    font-weight: 100;
+    background-color: ##FCFCFC;
+}
+header {
+    background-color: #DA3540;
+    height: 50px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    line-height: 50px;
+    color: white;
+}
+header>h1 {
+    margin: 0px;
+    margin-left: 20px;
+    font-weight: 100;
+    display: inline-block;
+}
+.average {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+}
+.container {
+    margin: 0 auto;
+    width: 70%;
+}
+.card {
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all ease 200ms;
+    width: 200px;
+    height: 300px;
+    line-height: 300px;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+.voted {
+    box-shadow: 0px 0px 38px rgba(255, 255, 0, 0.64);
+}
+poker-card.ng-enter>.card,
+poker-card.ng-leave>.card,
+poker-card.ng-move>.card {
+    position: relative;
+}
+poker-card.ng-enter>.card {
+    oapcity: 0;
+    transform: scale(0);
+}
+poker-card.ng-enter.ng-enter-active>.card {
+    opacity: 1;
+    transform: scale(1);
+}
+poker-card.ng-leave>.card {
+    oapcity: 1;
+    transform: scale(1) rotate(0deg);
+}
+poker-card.ng-leave.ng-leave-active>.card {
+    opacity: 0;
+    transform: scale(0) rotate(180deg);
+}
+.front, .back {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+.back {
+    position: relative;
+    background-color: #B5B5B5;
+    background-size: auto 100% !important;
+    background-position: -50px !important;
+    -webkit-backface-visibility: hidden;
+}
+.name {
+    font-size: 2em;
+    transform: rotate(-40deg);
+    vertical-align: middle;
+    line-height: normal;
+    display: inline-block;
+    font-weight: 100 !important;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+.front {
+    transform: rotateY(180deg);
+    background-color: #F2F2F2;
+    font-size: 3em;
+}
+.showed {
+    transform: rotateY(180deg);
+}
+.showed .back {
+    display: none;
+}
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}

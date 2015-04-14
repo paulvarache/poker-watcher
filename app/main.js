@@ -3,7 +3,7 @@ angular.module('watcher', ['poker', 'ngAnimate'])
 .controller('MainController', ["$scope", function ($scope) {
     $scope.users = {};
     $scope.showed = false;
-    var socket = io.connect("http://localhost:3000");
+    var socket = io.connect("http://paulvarache.ninja:4000");
     socket.on('connect', function () {
         socket.emit('poker:watcher');
         $scope.$apply(function () {

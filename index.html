@@ -12,6 +12,8 @@
     </header>
 
     <div class="container">
+        <button ng-click="show()">Show</button>
+        <button ng-click="reset()">Reset</button>
         <div class="disconnected" ng-show="!connected">You are not connected</div>
 
         <poker-card ng-repeat="(id, user) in users" user="{{user}}" showed="{{showed}}" voted="{{voted}}" ng-show="connected"></poker-card>

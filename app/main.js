@@ -80,4 +80,11 @@ angular.module('watcher', ['poker', 'ngAnimate'])
             delete $scope.users[id].choice;
         });
     });
+
+    $scope.show = function () {
+        socket.emit('watcher:show');
+    };
+    $scope.reset = function () {
+        socket.emit('watcher:reset');
+    };
 }]);

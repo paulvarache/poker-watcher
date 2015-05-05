@@ -114,3 +114,10 @@ poker-card.ng-leave.ng-leave-active>.card {
     height: 30px;
     border-radius: 50%
 }
+button {
+    padding: 7px;
+    margin: 3px;
+    font-size: 1.1em;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
